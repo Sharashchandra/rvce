@@ -1,0 +1,22 @@
+{% extends "base.html" %} {% block title %} CryptoHub {% endblock %} {% block content %}
+<h1>Generated Encryption Keys:</h1>
+<br>
+<div>
+    <h1>Public Key: </h1>
+    <div style="font-family: 'Courier New', Courier, monospace">
+        {% for lines in pub_key %} {{lines}}
+        <br> {% endfor %}
+    </div>
+    
+    <a href="static/keys/{{pubname}}.pub"><button type="button">Download key</button></a>
+    <br>
+    <br>
+    <h1>Private Key:</h1>
+    <div style="font-family: 'Courier New', Courier, monospace">
+        {% for lines in priv_key %} {{lines}}
+        <br> {% endfor %}
+    </div>
+    <a href="static/keys/{{privname}}"><button type="button">Download key</button></a>
+    <br>
+</div>
+{% endblock %}

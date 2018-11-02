@@ -1,0 +1,25 @@
+{% extends "base.html" %} {% block title %} CryptoHub {% endblock %} {% block content %}
+
+<h1>Encrypt a file or text</h1>
+<form action="{{ url_for('decrypt')}}" method="POST" enctype="multipart/form-data">
+    <p>
+        <input type="radio" name="type" value="rsa" checked> RSA
+        <input type="radio" name="type" value="aes"> AES
+    </p>
+
+    <div id='u'>
+        Upload Private Key file :
+        <input type="file" name="priv_key">
+    </div>
+    <br>
+    <div id='u'>
+        Upload Encrypted file :
+        <input type="file" name="cipher_text">
+    </div>
+    <!-- <p>Message to Decrypt:</p>
+    <input type="text" class="textbox" name="cipher_text">
+    <br>
+    <br> -->
+    <button type="submit">Decrypt</button>
+</form>
+{% endblock %}

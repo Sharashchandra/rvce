@@ -1,0 +1,17 @@
+{% extends "base.html" %} {% block title %} CryptoHub {% endblock %} {% block content %}
+<h1>Plain Text:</h1>
+<br>
+<hr>
+<div>
+    <div style="font-family: Arial, Helvetica, sans-serif">
+        {{plain_text}}
+        <br>
+        <hr>
+        <br>
+    </div>
+    <a href="static/{{pname}}.enc">
+        <button type="button">Download CipherText</button>
+    </a>
+    <br>
+</div>
+{% endblock %}

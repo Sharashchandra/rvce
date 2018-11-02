@@ -1,0 +1,20 @@
+{% extends "base.html" %} {% block title %} CryptoHub {% endblock %} {% block content %}
+<h1>Generate an Encryption key </h1>
+<form action="{{ url_for('generate')}}" method="POST">
+    <p>
+        <input type="radio" name="type" value="rsa" checked> RSA
+        <input type="radio" name="type" value="aes"> AES
+    </p>
+
+    <p>Key Size :
+        <input type="number" name="size" min="1024" max="16384" step="256" value="1024">
+    </p>
+
+    <p>Passphrase :
+        <input type="password" name="passphrase" minlength="8">
+        (leave blank for unencrypted key)
+    </p>
+
+    <button type="submit">Generate</button>
+</form>
+{% endblock %}
