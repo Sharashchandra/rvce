@@ -25,7 +25,7 @@ def details():
 
 @app.route("/signup")
 def signup():
-    stuff = {"name" : "Something", "contact_no":"1234567890"}
+    stuff = {"name" : "Something", "location":"1234567890", "Capacity":"5"}
     users.insert_one(stuff).inserted_id
     return "<h1>Something</h1>"
 
