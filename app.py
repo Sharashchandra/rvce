@@ -58,6 +58,11 @@ def addowner():
         return redirect(url_for("/addowner"))
     return render_template("owner_form.html", visit=visit)
 
+@app.route("/final")
+def final():
+    visit = True
+    return render_template("final.html")
+
 @app.errorhandler(404)
 def not_found():
     return render_template('404.html')
