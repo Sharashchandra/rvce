@@ -27,6 +27,13 @@
                 <a href="/">
                     <h1 class="title">{% block title %}{% endblock %}</h1>
                 </a>
+                {% if visit %}
+                <nav>
+                    <ul>
+                        <li><a href="/index">Log Out</a></li>
+                    </ul>
+                </nav>
+                {% else %}
                 <nav>
                     <ul>
                         <li><a href="/signin">Sign In</a></li>
@@ -34,6 +41,7 @@
                         <!--<li><a href="#">Decrypt</a></li>-->
                     </ul>
                 </nav>
+                {% endif %}
             </header>
         </div>
 

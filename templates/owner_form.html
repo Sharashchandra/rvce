@@ -1,25 +1,37 @@
 {% extends "base.html" %}
 
 {% block title %}
-De-Crowder  
+De-Crowder
 {% endblock %}
 {% block content %}
 <form>
-	<div class="form-group">
- <br><br><select name ="Category" class="custom-select">
- 	<option value="" disabled selected>Category</option>
- 	<option value="banks"> Banks </option>
- 	<option value="govt"> Government Offices </option>
- 	<option value="restaurant"> Restaurant </option>
- </select>	<br><br>
-   Entity Name:
-  <input type="text" name="Name" placeholder="Name" class="form-control"><br>
-  Entity Location:
-  <input type="text" name="Location" placeholder="location" class="form-control"><br>
-  Entity Capacity:
-  <input type="text" name="Capacity" placeholder="Count" class="form-control"><br>
-  <button type="button" id="enter"  class="btn btn-primary" >Submit</button>
+    <div class="form-group">
+        <br><select name="Category" class="custom-select">
+            <option value="" disabled selected>Category</option>
+            <option value="banks"> Banks </option>
+            <option value="govt"> Government Offices </option>
+            <option value="restaurant"> Restaurant </option>
+        </select> <br><br>
+        <div class="row">
+            <div class="col-xs-5">
+                <label>Entity Name:</label>
+                <input type="text" name="Entity_Name" placeholder="Name" class="form-control"><br>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-5">
+                Entity Location:
+                <input type="text" name="Location" placeholder="location" class="form-control"><br>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-5">
+                <label>Entity Capacity:</label>
+                <input type="text" name="Capacity" placeholder="Count" class="form-control"><br>
+            </div>
+        </div>
+        <button type="button" id="enter" class="btn btn-primary">Submit</button>
 
- </div>
+    </div>
 </form>
 {% endblock %}
