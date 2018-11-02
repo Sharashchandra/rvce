@@ -1,13 +1,10 @@
-<html>
-    <head>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-        <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-    </head>
+{% extends "base.html" %}
+
+{% block title %}
+De-Crowder  
+{% endblock %}
+{% block content %}
 <form>
-
-
 	<div class="form-group">
  <br><br><select name ="Category" class="custom-select">
  	<option value="" disabled selected>Category</option>
@@ -15,20 +12,14 @@
  	<option value="govt"> Government Offices </option>
  	<option value="restaurant"> Restaurant </option>
  </select>	<br><br>
-   Name:
-  <input type="text" name="name" placeholder="Name" class="form-control">
-  location:
-  <input type="text" name="Location" placeholder="location" class="form-control">
-  Capacity:
-  <input type="text" name="Capacity" placeholder="Count" class="form-control">
+   Entity Name:
+  <input type="text" name="Name" placeholder="Name" class="form-control"><br>
+  Entity Location:
+  <input type="text" name="Location" placeholder="location" class="form-control"><br>
+  Entity Capacity:
+  <input type="text" name="Capacity" placeholder="Count" class="form-control"><br>
   <button type="button" id="enter"  class="btn btn-primary" >Submit</button>
 
  </div>
-  
-
-
-
-
 </form>
-
-</html>
+{% endblock %}

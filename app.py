@@ -9,6 +9,7 @@ client = MongoClient()
 db = client['rvce']
 users = db.users
 
+db_entries = {"name" : "", "email" : "", "password" : "", "entity_name" : "", "entity_location" : ""}
 
 @app.route('/')
 @app.route('/index')
@@ -25,14 +26,20 @@ def details():
 
 @app.route("/signup")
 def signup():
-    stuff = {"name" : "Something", "location":"1234567890", "Capacity":"5"}
+    stuff = {"name" : "", "location":"1234567890", "Capacity":"5"}
     users.insert_one(stuff).inserted_id
-    return "<h1>Something</h1>"
+    return render_template("owner_form.html")
 
 @app.route("/signin")
 def signin():
     return redirect(url_for('index'))
 
+@app.route("/addowner")
+def addowner():
+    name = request.form['Name']
+    location = request.form['Location']
+    capacity = request.form['Capacity']
+    category = request.form['Category']
 
 @app.errorhandler(404)
 def not_found():
