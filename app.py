@@ -32,7 +32,7 @@ def signup():
 
 @app.route("/signin")
 def signin():
-    return redirect(url_for('index'))
+    return render_template("signin.html")
 
 @app.route("/addowner")
 def addowner():
