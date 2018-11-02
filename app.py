@@ -4,12 +4,14 @@ from pymongo import MongoClient
 app=Flask(__name__)
 app.config['SECRET_KEY']=b'N\x83Y\x99\x04\xc9\xcfI\xb7\xfc\xce\xd1\xcf\x01\xa8\xccr\xbb&\x1b\x11\xac\xc7V'
 
+#Configuring mongodb
 client = MongoClient()
-
 db = client['rvce']
 users = db.users
 
-db_entries = {"name" : "", "email" : "", "password" : "", "entity_name" : "", "entity_location" : ""}
+
+
+db_entries = {"name" : "", "email" : "", "password" : "", "category" : "", "entity_name" : "", "entity_location" : "", "capacity" : 0}
 
 @app.route('/')
 @app.route('/index')
