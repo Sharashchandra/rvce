@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}
+De-Crowder  
+{% endblock %}
+{% block content %}
+<form>  <br>
+		<br>
+		Name:<br>
+		<input type="text" name="text" id = "text"  placeholder="Name" required><br>
+
+
+		Email:<br>
+		<input type="email" name="email" id = "email"  placeholder="Email" required><br>
+
+		
+		
+		Password:<br>
+		<input type="password" name="pwd" id="pwd" placeholder="Password" required><br>
+		
+
+		Confirm Password:<br>
+		<input type="password" name="pwd" id="pwd" placeholder="Password" required><br><br>
+
+
+		<div class="btn-group btn-group-lg">
+		<button type="button" id="enter"  class="btn btn-primary">Submit</button>
+	    </div>
+
+</form>
+{% endblock %}
