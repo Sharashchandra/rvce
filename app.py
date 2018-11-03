@@ -30,10 +30,6 @@ def list_rest():
 def list_govt():
     return render_template('list_govt.html')   
 
-@app.route('/final')
-def final():
-    return render_template('final.html') 
-
 @app.route("/details")
 def details():
     return render_template('details.html')
@@ -70,6 +66,11 @@ def addowner():
         category = request.form['Category']
         return redirect(url_for("/addowner"))
     return render_template("owner_form.html", visit=visit)
+
+@app.route("/final")
+def final():
+    visit = True
+    return render_template("final.html")
 
 @app.errorhandler(404)
 def not_found():
