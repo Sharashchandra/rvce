@@ -17,9 +17,22 @@ visit = False
 def index():
     return render_template('index.html')
 
-@app.route("/category")
-def category():
-    return render_template('category.html')
+@app.route("/list_banks")
+def list_banks():
+    return render_template('list_banks.html')
+
+
+@app.route("/list_rest")
+def list_rest():
+    return render_template('list_rest.html')
+
+@app.route("/list_govt")
+def list_govt():
+    return render_template('list_govt.html')   
+
+@app.route('/final')
+def final():
+    return render_template('final.html') 
 
 @app.route("/details")
 def details():
